@@ -18,3 +18,10 @@ window.addEventListener('load', function() {
 	setInterval(posodobiOpomnike, 1000);
 	
 });
+
+var potrdiGumb = function(){
+var text = document.getElementById('uporabnisko_ime').value;
+document.getElementById('uporabnik').innerHTML=text
+var pokrivalo = document.querySelector(".pokrivalo").style.visibility="hidden";
+	
+}
