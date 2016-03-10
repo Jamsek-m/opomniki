@@ -25,3 +25,13 @@ document.getElementById('uporabnik').innerHTML=text
 var pokrivalo = document.querySelector(".pokrivalo").style.visibility="hidden";
 	
 }
+
+var dodajOpomnik = function(){
+	var naziv = document.getElementById('naziv_opomnika');
+	var cas = document.getElementById('cas_opomnika');
+	var opomniki = document.getElementById('opomniki');
+	
+	opomniki.innerHTML=naziv.value+"<br>Opomnik cez "+cas.value+" sekund.";
+	naziv.value="";
+	cas.value="";
+}
