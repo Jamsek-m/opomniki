@@ -11,6 +11,13 @@ window.addEventListener('load', function() {
 			var cas = parseInt(casovnik.innerHTML);
 	
 			//TODO: 
+			var naziv = document.getElementById('naziv_opomnika');
+			if(cas == 0){
+				alert("Opomnik!\n\nZadolžitev "+naziv.value+" je potekla!");
+			} else{
+				cas--;
+				casovnik
+			}
 			// - če je čas enak 0, izpiši opozorilo "Opomnik!\n\nZadolžitev NAZIV_OPOMNIK je potekla!"
 			// - sicer zmanjšaj čas za 1 in nastavi novo vrednost v časovniku
 		}
@@ -31,7 +38,31 @@ var dodajOpomnik = function(){
 	var cas = document.getElementById('cas_opomnika');
 	var opomniki = document.getElementById('opomniki');
 	
-	opomniki.innerHTML=naziv.value+"<br>Opomnik cez "+cas.value+" sekund.";
+	var naziv_opomnika = document.getElementById('naziv_opomnika').value;
+	var cas_opomnika = document.getElementById('cas_opomnika').value;
 	naziv.value="";
 	cas.value="";
+	
+	opomniki.innerHTML+=" \
+	<div class='opomnik rob senca'> \
+	<div class='naziv_opomnika'>"+naziv_opomnika+"</div> \
+	<div class='cas_opomnika'>Opomnik cez "+cas_opomnika+
+	"</span> sekund.</div> \
+	</div>";
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
